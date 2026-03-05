@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IXL Study Tools</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#0d0d0d;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"Segoe UI",sans-serif;color:#fff;}
+  h1{font-size:32px;font-weight:300;letter-spacing:10px;margin-bottom:6px;}
+  .sub{color:#333;font-size:11px;letter-spacing:3px;margin-bottom:60px;}
+  .card{background:#111;border:1px solid #1e1e1e;border-radius:16px;padding:40px;width:480px;max-width:92vw;text-align:center;}
+  .card h2{font-size:14px;font-weight:500;letter-spacing:2px;color:#aaa;margin-bottom:8px;text-transform:uppercase;}
+  .card p{color:#444;font-size:12px;line-height:1.8;margin-bottom:30px;}
+  .bookmark-btn{display:inline-block;background:#1a1a1a;border:1px solid #6c63ff;color:#6c63ff;padding:12px 24px;border-radius:8px;font-size:13px;letter-spacing:1px;text-decoration:none;cursor:grab;box-shadow:0 0 12px #6c63ff33;transition:background 0.2s,box-shadow 0.2s;user-select:none;}
+  .bookmark-btn:hover{background:#1a1730;box-shadow:0 0 20px #6c63ff55;}
+  .divider{height:1px;background:#1a1a1a;margin:30px 0;}
+  .steps{text-align:left;}
+  .step{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;}
+  .step-num{width:22px;height:22px;min-width:22px;border-radius:50%;background:#1a1a1a;border:1px solid #333;display:flex;align-items:center;justify-content:center;font-size:10px;color:#555;margin-top:1px;}
+  .step-text{color:#555;font-size:12px;line-height:1.6;}
+  .step-text b{color:#888;}
+  .features{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:40px;}
+  .badge{background:#111;border:1px solid #1e1e1e;color:#333;font-size:9px;letter-spacing:1.5px;padding:5px 10px;border-radius:6px;text-transform:uppercase;}
+  .warning{color:#222;font-size:10px;margin-top:30px;letter-spacing:1px;}
+</style>
+</head>
+<body>
+
+<h1>IXL TOOLS</h1>
+<p class="sub">STUDY ASSISTANT &bull; V2.1</p>
+
+<div class="card">
+  <h2>Install</h2>
+  <p>Drag the button below to your bookmarks bar.<br>Click it on any page to launch.</p>
+
+  <a class="bookmark-btn" id="bookmarkBtn" href="#">⚡ Launch Tool</a>
+
+  <div class="divider"></div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">Show your bookmarks bar — press <b>Ctrl+Shift+B</b></div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><b>Drag the button above</b> to your bookmarks bar</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><b>Click it</b> on any page to launch</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">Press <b>E</b> at any time to close everything instantly</div>
+    </div>
+  </div>
+</div>
+
+<div class="features">
+  <span class="badge">Panic Key</span>
+  <span class="badge">Ad Blocker</span>
+  <span class="badge">6 Themes</span>
+  <span class="badge">Proxy Powered</span>
+  <span class="badge">Redirect Block</span>
+</div>
+
+<p class="warning">FOR PERSONAL USE ONLY</p>
+
+<script>
+  var bookmarkCode = "javascript:(function(){var s=document.createElement('script');s.src='https://wudzel.github.io/ixlstudytools/silenttab.js?t='+Date.now();document.head.appendChild(s);})();";
+  document.getElementById('bookmarkBtn').href = bookmarkCode;
+</script>
+
+</body>
+</html>
